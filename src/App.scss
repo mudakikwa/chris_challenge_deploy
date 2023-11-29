@@ -1,0 +1,39 @@
+@import "./styles/variables.scss";
+@import "./styles/mixins.scss";
+
+.app {
+  height: 100%;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  gap: 50px;
+  overflow: hidden;
+  @include mq($xlg) {
+    padding: 30px;
+  }
+  @include mq($lg) {
+    padding: 25px;
+  }
+  @include mq($md) {
+    padding: 20px;
+  }
+  @include mq($md) {
+    padding: 15px;
+  }
+  @include mqh($sm) {
+    overflow-y: auto;
+    padding: 15px;
+  }
+}
+
+.appInfo {
+  overflow: hidden;
+  min-height: 100vh;
+  height: 100%;
+  background-color: $black;
+  padding-top: 100px;
+}

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Gabarito&family=Poppins:ital,wght@0,300;1,200;1,300;1,900&family=Ubuntu:ital,wght@0,300;0,500;1,400;1,700&family=Young+Serif&display=swap");
+//global colors
+
+$black: #ffffff;
+$blackOpaque: rgba(225, 217, 217, 0.15);
+$white: #000000;
+$white-op: #00000052;
+$error: rgb(245, 5, 73);
+$gray: #898d98;
+$unread: #4b5155;
+$successBlack: rgb(4, 109, 165);
+$success: rgb(0, 255, 26);
+$warning: #ffe600;
+$blue: #3015b4;
+$lucid: #0cf500;
+$blueBoard: rgba(13, 150, 223, 0.08);
+
+//fonts:
+$poppins: "Andika", "Gabarito", sans-serif;
+
+//sizes
+
+$xxs: 320px;
+$xxsh: 425px;
+$xls: 600px;
+$xlsb: 692;
+$sm: 500px;
+$xms: 375px;
+$mdb: 991px;
+$smb: 576px;
+$md: 780px;
+$lgh: 930px;
+$lg: 1024px;
+$lgb: 1200px;
+$lgd: 1166px;
+$xlg: 1600px;
+$xlg1920: 1920px;
+$xxlg: 5000px;
+$headervh: 100vh;
+$header-padding: 10vw;
+$divider: (4/3);
+$xd-width: 1920;
+$xd-height: 1080;
+$width-of-container: (85px / $divider);
+$menu-height: 54px;

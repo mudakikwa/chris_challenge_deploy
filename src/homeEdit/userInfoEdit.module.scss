@@ -1,0 +1,181 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.userInfo {
+  :global {
+    width: 40%;
+    padding: 20px;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    border: none;
+    min-height: 60vh;
+    margin-top: 50px;
+    @include bg-blur;
+    @include mq($xlg) {
+      width: 50%;
+    }
+    @include mq($lg) {
+      gap: 15px;
+      padding: 15px;
+      width: 60%;
+    }
+    @include mq($md) {
+      width: 65%;
+    }
+    @include mq($xls) {
+      padding: 15px;
+      width: 70%;
+      gap: 15px;
+      box-shadow: 5px 5px 14px -3px $white;
+    }
+    @include mqh($sm) {
+      padding-top: 20px;
+      width: 80%;
+    }
+    .h3 {
+      @include h1;
+      width: 100%;
+      text-align: center;
+    }
+    .input {
+      width: 100%;
+      padding: 0;
+      height: fit-content;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5px;
+      .input_wrapper {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        @include mq($lg) {
+          gap: 15px;
+        }
+        @include mq($xls) {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .input_label {
+          @include p;
+          color: $white;
+          width: 8%;
+        }
+        .label_right {
+          width: unset;
+          flex-grow: 1;
+          margin-left: calc(8% - 20px);
+          align-items: center;
+          @include mq($lg) {
+            margin-left: calc(6% - 15px);
+          }
+        }
+        .input_field {
+          height: 50px;
+          flex-grow: 1;
+          border-radius: 5px;
+          @include p;
+          padding: 0 10px;
+          @include transition;
+          border: 1px solid $white-op;
+          @include mq($lg) {
+            height: 40px;
+          }
+          @include mq($xls) {
+            width: calc(100% - 20px);
+          }
+          &:hover {
+            border: 1px solid $white;
+          }
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid $white;
+          }
+        }
+      }
+      .check_input {
+        flex-direction: row;
+      }
+      .input_error {
+        @include p1;
+        color: $error;
+        font-style: italic;
+        margin-left: 10%;
+        align-items: center;
+        @include mq($xls) {
+          margin-left: 0;
+        }
+      }
+    }
+    .actions {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 50px;
+      @include mq($xms) {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .btn {
+        padding: 0 30px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include p;
+        color: $white;
+        border-radius: 5px;
+        cursor: pointer;
+        @include transition;
+        border: none;
+        @include mq($xms) {
+          width: 100%;
+        }
+      }
+      .editBtn {
+        color: $white;
+        &:hover {
+          color: $warning;
+        }
+      }
+      .saveBtn {
+        color: $success;
+        &:hover {
+          color: $white;
+        }
+      }
+      .loading_box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// when form has errors
+.userInfoError {
+  :global {
+    z-index: 5;
+    box-shadow: 15px 15px 14px -5px $error;
+    @include mq($xls) {
+      box-shadow: 5px 5px 14px -3px $error;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.userInfo {
+  :global {
+    width: 40%;
+    padding: 20px;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    border: none;
+    position: relative;
+    min-height: 60vh;
+    height: fit-content;
+    @include bg-blur;
+    @include mq($xlg) {
+    }
+    .tableBox {
+      border-radius: 5px;
+    }
+    @include mq($lg) {
+      gap: 15px;
+      padding: 15px;
+      width: 60%;
+    }
+    @include mq($md) {
+      width: 65%;
+    }
+    @include mq($xls) {
+      padding: 15px;
+      width: 70%;
+      gap: 15px;
+    }
+    @include mqh($sm) {
+      width: 80%;
+    }
+    .h3 {
+      @include h1;
+      width: 100%;
+      text-align: center;
+    }
+    .input {
+      width: 100%;
+      padding: 0;
+      height: fit-content;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5px;
+      .input_wrapper {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        @include mq($lg) {
+          gap: 15px;
+        }
+        @include mq($xls) {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .input_label {
+          @include p;
+          color: $white;
+          width: 8%;
+        }
+        .sectors {
+          height: fit-content;
+          flex-grow: 1;
+          background: transparent;
+          margin: 0;
+          background-color: rgba(4, 140, 212, 0.15);
+          border-radius: 5px;
+          padding: 10px;
+          @include mq($xls) {
+            width: calc(100% - 20px);
+          }
+          .button_category_box {
+            border: none;
+            cursor: auto;
+            padding: 0;
+            padding: 5px;
+            background-color: $white;
+            display: flex;
+            flex-wrap: nowrap;
+            border-radius: 5px;
+            color: $white;
+            position: relative;
+            z-index: 1;
+            @include p;
+            @include mq($xls) {
+              width: 100%;
+            }
+            .category_value,
+            .category,
+            .title {
+              height: 100%;
+              border-radius: inherit;
+              background-color: hsla(0, 0%, 0%, 0.5);
+              @include p;
+              border: none;
+              color: $black;
+              cursor: auto;
+              padding: 5px 10px;
+              padding-right: 30px;
+              position: relative;
+              width: fit-content;
+              &:hover {
+                background-color: hsla(0, 0%, 0%, 0.5);
+              }
+            }
+            .category {
+              transform: translateX(-25px);
+              background-color: $successBlack;
+              z-index: 2;
+              &:hover {
+                background-color: $successBlack;
+              }
+            }
+            .title {
+              right: 0;
+              margin-left: -50px;
+              z-index: 4;
+              background-color: $success;
+              padding-right: 10px;
+              &:hover {
+                background-color: $success;
+              }
+            }
+          }
+        }
+
+        .input_field {
+          height: 50px;
+          flex-grow: 1;
+          border-radius: 5px;
+          @include p;
+          padding: 0 10px;
+          border: none;
+          @include mq($lg) {
+            height: 40px;
+          }
+          @include mq($xls) {
+            width: calc(100% - 20px);
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .check_input {
+        flex-direction: row;
+      }
+      .input_error {
+        @include p1;
+        color: $error;
+        font-style: italic;
+        margin-left: 10%;
+        align-items: center;
+        @include mq($xls) {
+          margin-left: 0;
+        }
+      }
+    }
+    .actions {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: auto;
+      @include mq($xms) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .btn {
+        padding: 0 30px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include p;
+        color: $black;
+        border-radius: 5px;
+        cursor: pointer;
+        @include transition;
+        border: none;
+        @include mq($xms) {
+          width: 100%;
+        }
+      }
+      .editBtn {
+        color: $success;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
